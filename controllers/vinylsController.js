@@ -4,7 +4,7 @@ const Vinyl = require('./../models/Vinyl')
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    Vinyl.find()
+    Vinyl.find({})
         .then((vinyls => res.json({
             status: 200,
             vinyls: vinyls
